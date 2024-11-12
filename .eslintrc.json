@@ -1,0 +1,25 @@
+{
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "@vue/typescript/recommended",
+      "plugin:prettier/recommended"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2020,
+      "sourceType": "module",
+      "parser": "@typescript-eslint/parser"
+    },
+    "env": {
+      "browser": true,
+      "node": true,
+      "es2020": true
+    },
+    "rules": {
+      "prettier/prettier": "error",
+      "vue/max-attributes-per-line": "off",
+      "vue/singleline-html-element-content-newline": "off",
+      "vue/html-self-closing": ["error", { "html": { "normal": "never", "void": "always" } }],
+      "@typescript-eslint/explicit-module-boundary-types": "off"
+    }
+  }
+  
