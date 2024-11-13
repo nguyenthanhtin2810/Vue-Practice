@@ -24,5 +24,7 @@
   "rating": "ĐÁNH GIÁ",
   "load_categories": "Loading categories...",
   "results": "kết quả",
-  "see": "Xem"
+  "see": "Xem",
+  "searchIconAlt": "Biểu tượng tìm kiếm",
+  "clearSearchIconAlt": "Xóa biểu tượng tìm kiếm"
 }

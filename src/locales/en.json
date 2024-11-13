@@ -24,5 +24,7 @@
   "rating": "RATING",
   "load_categories": "Đang tải danh mục...",
   "results": "results",
-  "see": "See"
+  "see": "See",
+  "searchIconAlt": "Search icon",
+  "clearSearchIconAlt": "Clear search icon"
 }
