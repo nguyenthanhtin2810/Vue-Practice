@@ -25,6 +25,9 @@
   "load_categories": "Đang tải danh mục...",
   "results": "results",
   "see": "See",
-  "searchIconAlt": "Search icon",
-  "clearSearchIconAlt": "Clear search icon"
+  "search_icon_alt": "Search icon",
+  "clear_search_icon_alt": "Clear search icon",
+  "rating_star_alt": "Rating star",
+  "search_circle_icon_alt": "Search circle icon",
+  "clear_filter_icon_alt": "Clear filter icon"
 }

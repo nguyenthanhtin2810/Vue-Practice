@@ -2,7 +2,7 @@
   <div class="relative w-full max-w-2xl">
     <img
       :src="searchIcon"
-      :alt="t('searchIconAlt')"
+      :alt="t('search_icon_alt')"
       class="h-4 w-4 absolute text-yellow-600 left-8 top-6"
     />
     <input
@@ -15,7 +15,7 @@
     <button v-if="modelValue" type="button" @click="clearSearch">
       <img
         :src="closeIcon"
-        :alt="t('clearSearchIconAlt')"
+        :alt="t('clear_search_icon_alt')"
         class="h-4 w-4 text-black absolute right-8 top-6"
       />
     </button>

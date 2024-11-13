@@ -25,6 +25,9 @@
   "load_categories": "Loading categories...",
   "results": "kết quả",
   "see": "Xem",
-  "searchIconAlt": "Biểu tượng tìm kiếm",
-  "clearSearchIconAlt": "Xóa biểu tượng tìm kiếm"
+  "search_icon_alt": "Biểu tượng tìm kiếm",
+  "clear_search_icon_alt": "Xóa biểu tượng tìm kiếm",
+  "rating_star_alt": "Xếp hạng sao",
+  "search_circle_icon_alt": "Biểu tượng tròn tìm kiếm",
+  "clear_filter_icon_alt": "Biểu tượng xóa bộ lọc"
 }
