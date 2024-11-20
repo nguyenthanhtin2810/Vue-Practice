@@ -32,5 +32,8 @@
   "clear_filter_icon_alt": "Biểu tượng xóa bộ lọc",
   "angle_right_icon_alt": "Biểu tượng trỏ phải",
   "angle_left_icon_alt": "Biểu tượng trỏ trái",
-  "triangle_icon_alt": "Biểu tượng tam giác"
+  "triangle_icon_alt": "Biểu tượng tam giác",
+  "star_empty_icon_alt": "Biểu tượng ngôi sao trống",
+  "star_full_icon_alt": "Biểu tượng ngôi sao đặc",
+  "filter_icon_alt": "Biểu tượng bộ lọc"
 }

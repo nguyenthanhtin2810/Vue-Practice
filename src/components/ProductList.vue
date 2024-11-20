@@ -26,7 +26,7 @@
           <h3 class="font-bold text-sm cursor-pointer hover:text-yellow-600">
             <span v-html="highlightText(product.name, searchTerm)"></span>
           </h3>
-          <Tooltip :text="product.description" width="300px">
+          <Tooltip :text="product.description" :width="widthValue" :offsetX="offsetXValue">
             <p class="text-sm md:line-clamp-3 line-clamp-2">
               <span v-html="highlightText(product.description, searchTerm)"></span>
             </p>
@@ -77,7 +77,7 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue';
+import { defineComponent, ref, computed, onMounted, onUnmounted } from 'vue';
 import Tooltip from './Tooltip.vue';
 import starSolid from '../assets/icon/star-solid.svg';
 import clearFilter from '../assets/icon/return.svg';
@@ -104,11 +104,35 @@ export default defineComponent({
     },
   },
   setup() {
+    const isMobile = ref(false);
+    const updateScreenSize = () => {
+      isMobile.value = window.innerWidth < 768;
+    };
+
+    const offsetXValue = computed(() => {
+      return isMobile.value ? -70 : 0;
+    });
+
+    const widthValue = computed(() => {
+      return isMobile.value ? "250px" : "300px";
+    });
+
+    onMounted(() => {
+      updateScreenSize();
+      window.addEventListener('resize', updateScreenSize);
+    });
+
+    onUnmounted(() => {
+      window.removeEventListener('resize', updateScreenSize);
+    });
+
     return {
       starSolid,
       clearFilter,
       searchCircle,
       highlightText,
+      offsetXValue,
+      widthValue,
     };
   },
 });
