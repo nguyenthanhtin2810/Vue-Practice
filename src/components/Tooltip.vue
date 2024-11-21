@@ -40,10 +40,23 @@ export default defineComponent({
       type: String,
       default: '300px',
     },
+    offsetX: {
+      type: Number,
+      default: 0,
+    },
+    offsetY: {
+      type: Number,
+      default: 0,
+    },
   },
   setup(props) {
     const isVisible = ref(false);
-    const tooltipStyle = ref({ top: '0px', left: '0px', transform: 'translate(0, 0)', width:'300px' });
+    const tooltipStyle = ref({
+      top: '0px',
+      left: '0px',
+      transform: 'translate(0, 0)',
+      width: '300px',
+    });
 
     const showTooltip = (event: MouseEvent) => {
       isVisible.value = true;
@@ -53,32 +66,32 @@ export default defineComponent({
       switch (props.position) {
         case 'top':
           tooltipStyle.value = {
-            top: `${rect.top + window.scrollY - 10}px`,
-            left: `${rect.left + window.scrollX + rect.width / 2}px`,
+            top: `${rect.top + window.scrollY - 10 - props.offsetY}px`,
+            left: `${rect.left + window.scrollX + rect.width / 2 + props.offsetX}px`,
             transform: 'translate(-50%, -100%)',
             width: props.width,
           };
           break;
         case 'right':
           tooltipStyle.value = {
-            top: `${rect.top + window.scrollY + rect.height / 2}px`,
-            left: `${rect.left + window.scrollX + rect.width + 10}px`,
+            top: `${rect.top + window.scrollY + rect.height / 2 + props.offsetY}px`,
+            left: `${rect.left + window.scrollX + rect.width + 10 + props.offsetX}px`,
             transform: 'translate(0, -50%)',
             width: props.width,
           };
           break;
         case 'bottom':
           tooltipStyle.value = {
-            top: `${rect.bottom + window.scrollY + 10}px`,
-            left: `${rect.left + window.scrollX + rect.width / 2}px`,
+            top: `${rect.bottom + window.scrollY + 10 + props.offsetY}px`,
+            left: `${rect.left + window.scrollX + rect.width / 2 + props.offsetX}px`,
             transform: 'translate(-50%, 0)',
             width: props.width,
           };
           break;
         case 'left':
           tooltipStyle.value = {
-            top: `${rect.top + window.scrollY + rect.height / 2}px`,
-            left: `${rect.left + window.scrollX - 10}px`,
+            top: `${rect.top + window.scrollY + rect.height / 2 + props.offsetY}px`,
+            left: `${rect.left + window.scrollX - 10 - props.offsetX}px`,
             transform: 'translate(-100%, -50%)',
             width: props.width,
           };
@@ -105,7 +118,13 @@ export default defineComponent({
       }
     });
 
-    return { isVisible, showTooltip, hideTooltip, tooltipPosition, tooltipStyle };
+    return {
+      isVisible,
+      showTooltip,
+      hideTooltip,
+      tooltipPosition,
+      tooltipStyle,
+    };
   },
 });
 </script>

@@ -32,5 +32,8 @@
   "clear_filter_icon_alt": "Clear filter icon",
   "angle_right_icon_alt": "Angle right icon",
   "angle_left_icon_alt": "Angle left icon",
-  "triangle_icon_alt": "Triangle icon"
+  "triangle_icon_alt": "Triangle icon",
+  "star_empty_icon_alt": "Star empty icon",
+  "star_full_icon_alt": "Star full icon",
+  "filter_icon_alt": "Filter icon"
 }
