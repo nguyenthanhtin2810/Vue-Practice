@@ -3,11 +3,13 @@
     <img
       :src="searchIcon"
       :alt="t('search_icon_alt')"
-      class="h-4 w-4 absolute text-yellow-600 left-8 top-6"
+      class="h-4 w-4 absolute text-yellow-600"
+      :class="searchIconPosition"
     />
     <input
       type="text"
-      class="w-full text-sm text-black rounded-md border border-gray-300 focus:outline-none px-14 py-5"
+      class="w-full text-sm text-black rounded-md border border-gray-300 focus:outline-none"
+      :class="inputPadding"
       :placeholder="placeholder"
       :value="modelValue"
       @input="handleInputChange"
@@ -16,7 +18,8 @@
       <img
         :src="closeIcon"
         :alt="t('clear_search_icon_alt')"
-        class="h-4 w-4 text-black absolute right-8 top-6"
+        class="h-4 w-4 text-black absolute"
+        :class="clearIconPosition"
       />
     </button>
   </div>
@@ -39,6 +42,21 @@ export default defineComponent({
       type: String,
       required: false,
       default: '',
+    },
+    searchIconPosition: {
+      type: String,
+      required: false,
+      default: 'left-8 top-6',
+    },
+    inputPadding: {
+      type: String,
+      required: false,
+      default: 'px-14 py-5',
+    },
+    clearIconPosition: {
+      type: String,
+      required: false,
+      default: 'right-8 top-6',
     },
   },
   setup(props, { emit }) {
